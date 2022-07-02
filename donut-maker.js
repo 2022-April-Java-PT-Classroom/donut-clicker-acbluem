@@ -11,21 +11,21 @@ class DonutMaker {
   }
 
   buyAutoClicker() {
-    let autoClickerPrice;
-    if (this.numOfDonuts >= 100 && this.numOfAutoClickers == 0) {
-      this.numOfDonuts -= 100;
-      this.numOfAutoClickers += 1;
-      autoClickerPrice *= 1.01;
-    } else {
-      if (this.numOfDonuts < autoClickerPrice) {
-        console.log('Not enough!');
-      } else {
-        this.numOfDonuts -= autoClickerPrice;
-        autoClickerPrice *= 1.01;
+    if (this.numOfAutoClickers >= 1) {
+      for (let i = 0; i > this.numOfAutoClickers; i++); {
+        autoClickerPrice *= 1.1;
+        autoClickerPrice = Math.round(autoClickerPrice);
       }
+    }
+
+    if (autoClickerPrice <= this.numOfDonuts) {
+      this.numOfDonuts -= autoClickerPrice;
+      this.numOfAutoClickers += 1;
     }
   }
 
 }
+
+let autoClickerPrice = 100;
 
 export default DonutMaker;
