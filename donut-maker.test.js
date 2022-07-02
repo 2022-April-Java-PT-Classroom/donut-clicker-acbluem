@@ -41,5 +41,11 @@ describe('DonutMaker object', () => {
     const underTest = new DonutMaker(121, 2, 0);
     underTest.buyAutoClicker();
     expect(underTest.numOfDonuts).toEqual(0);
-  })
+  });
+
+  test('Does not increase auto clicker count with insufficient donuts', () => {
+    const underTest = new DonutMaker(100, 2, 0);
+    underTest.buyAutoClicker();
+    expect(underTest.numOfAutoClickers).toEqual(2);
+  });
 });
