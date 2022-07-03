@@ -90,4 +90,10 @@ describe('DonutMaker object', () => {
     underTest.buyDonutMultiplier();
     expect(underTest.numOfDonuts).toEqual(0);
   });
+
+  test('Donuts does not subtract when there are insufficient funds for multipier', () => {
+    const underTest = new DonutMaker(11, 0, 2);
+    underTest.buyDonutMultiplier();
+    expect(underTest.numOfDonuts).toEqual(11);
+  });
 });
