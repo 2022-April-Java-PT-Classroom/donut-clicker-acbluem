@@ -71,4 +71,10 @@ describe('DonutMaker object', () => {
     underTest.buyDonutMultiplier();
     expect(underTest.numOfMultipliers).toEqual(1);
   });
+
+  test('Subtracts donuts after multiplier purchase', () => {
+    const underTest = new DonutMaker(10, 0, 0);
+    underTest.buyDonutMultiplier();
+    expect(underTest.numOfDonuts).toEqual(0);
+  });
 });
