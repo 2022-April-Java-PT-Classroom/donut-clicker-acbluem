@@ -43,8 +43,11 @@ class DonutMaker {
 
   activateAutoClicker() {
     setInterval(() => {
-      this.numOfDonuts += 1}
-      , 1000);
+      for (let i = 0; i > this.numOfMultipliers; i++); {
+        multiAutoValue *= 1.2;
+      }
+      this.numOfDonuts += Math.round(multiAutoValue);
+    }, 1000);
   }
 
 
@@ -53,5 +56,6 @@ class DonutMaker {
 let autoClickerPrice = 100;
 let multiplierPrice = 10;
 let multiplierValue = 1;
+let multiAutoValue = 1;
 
 export default DonutMaker;

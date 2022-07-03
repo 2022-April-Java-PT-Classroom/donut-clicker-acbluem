@@ -102,4 +102,24 @@ describe('DonutMaker object', () => {
     underTest.addDonut();
     expect(underTest.numOfDonuts).toEqual(1);
   });
+
+  test('Donut multiplier takes effect in addDonut with four multipliers', () => {
+    const underTest = new DonutMaker(0, 0, 4);
+    underTest.addDonut();
+    expect(underTest.numOfDonuts).toEqual(2);
+  });
+
+  test('Adds multiplier donuts via an activated auto clicker', () => {
+    const underTest = new DonutMaker(0, 1, 4);
+
+    jest.useFakeTimers();
+
+    underTest.addDonut();
+
+    underTest.activateAutoClicker();
+
+    jest.advanceTimersByTime(1000);
+
+    expect(underTest.numOfDonuts).toEqual(4);
+  });
 });
