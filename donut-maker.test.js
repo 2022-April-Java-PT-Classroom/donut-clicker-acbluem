@@ -96,4 +96,10 @@ describe('DonutMaker object', () => {
     underTest.buyDonutMultiplier();
     expect(underTest.numOfMultipliers).toEqual(2);
   });
+
+  test('Donut multiplier takes effect in addDonut with one multiplier', () => {
+    const underTest = new DonutMaker(0, 0, 1);
+    underTest.addDonut();
+    expect(underTest.numOfDonuts).toEqual(1);
+  });
 });

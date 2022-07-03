@@ -7,7 +7,10 @@ class DonutMaker {
   }
 
   addDonut() {
-    this.numOfDonuts += 1;
+    for (let i = 0; i > this.numOfMultipliers; i++); {
+      multiplierValue *= 1.2;
+    }
+    this.numOfDonuts += Math.round(multiplierValue);
   }
 
   buyAutoClicker() {
@@ -49,5 +52,6 @@ class DonutMaker {
 
 let autoClickerPrice = 100;
 let multiplierPrice = 10;
+let multiplierValue = 1;
 
 export default DonutMaker;
