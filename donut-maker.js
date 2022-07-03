@@ -24,6 +24,20 @@ class DonutMaker {
     }
   }
 
+  buyDonutMultiplier() {
+    if (this.numOfMultipliers >= 1) {
+      for (let i = 0; i > this.numOfMultipliers; i++); {
+        multiplierPrice *= 1.1;
+        multiplierPrice = Math.round(multiplierPrice);
+      }
+    }
+
+    if (multiplierPrice <= this.numOfDonuts) {
+      this.numOfDonuts -= multiplierPrice;
+      this.numOfMultipliers += 1;
+    }
+  }
+
   activateAutoClicker() {
     setInterval(() => {
       this.numOfDonuts += 1}
@@ -34,5 +48,6 @@ class DonutMaker {
 }
 
 let autoClickerPrice = 100;
+let multiplierPrice = 10;
 
 export default DonutMaker;
