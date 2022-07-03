@@ -24,6 +24,13 @@ class DonutMaker {
     }
   }
 
+  activateAutoClicker() {
+    setInterval(() => {
+      this.numOfDonuts += 1}
+      , 1000);
+  }
+
+
 }
 
 let autoClickerPrice = 100;

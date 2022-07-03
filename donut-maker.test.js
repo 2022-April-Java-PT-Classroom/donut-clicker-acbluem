@@ -48,4 +48,20 @@ describe('DonutMaker object', () => {
     underTest.buyAutoClicker();
     expect(underTest.numOfAutoClickers).toEqual(2);
   });
+
+  test('Adds donuts via an activated auto clicker', () => {
+    const underTest = new DonutMaker(0, 1, 0);
+
+    jest.useFakeTimers();
+
+    underTest.activateAutoClicker();
+
+    jest.advanceTimersByTime(1000);
+
+    expect(underTest.numOfDonuts).toEqual(1);
+  });
+
+
+
+
 });
