@@ -61,7 +61,10 @@ describe('DonutMaker object', () => {
     expect(underTest.numOfDonuts).toEqual(1);
   });
 
-
+  test('Retrieves donut multiplier count', () => {
+    const underTest = new DonutMaker(0, 0, 7);
+    expect(underTest.numOfMultipliers).toEqual(7);
+  });
 
 
 });
