@@ -63,6 +63,10 @@ class DonutMaker {
     }, 1000);
   }
 
+  getClickValue() {
+    return 1.2 ** this.numOfMultipliers;
+  }
+
 }
 
 let autoClickerPrice = 100;
