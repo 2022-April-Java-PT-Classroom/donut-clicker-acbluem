@@ -41,6 +41,39 @@ function createDonutMaker() {
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
     document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
-  
+  });
+
+  buyClickerButton.addEventListener('click', () => {
+    let oldClickerValue = createdDonutMaker.numOfAutoClickers;
+    createdDonutMaker.buyAutoClicker();
+    let newClickerValue = createdDonutMaker.numOfAutoClickers;
+
+    if (oldClickerValue == newClickerValue) {
+      buyClickerButton.innerText = 'Not Enough Donuts!';
+
+      setTimeout(() => {
+        buyClickerButton.innerText = 'Buy Auto Clicker';
+      }, 2000);
+    }
+
+    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+    document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
+  });
+
+  buyMultiplierButton.addEventListener('click', () => {
+    let oldMultiplierValue = createdDonutMaker.numOfMultipliers;
+    createdDonutMaker.buyDonutMultiplier();
+    let newMultiplierValue = createdDonutMaker.numOfMultipliers;
+
+    if (oldMultiplierValue == newMultiplierValue) {
+      buyMultiplierButton.innerText = 'Not Enough Donuts!';
+      
+      setTimeout(() => {
+        buyMultiplierButton.innerText = 'Buy Donut Multiplier';
+      }, 2000);
+    }
+
+    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+    document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
   });
 }

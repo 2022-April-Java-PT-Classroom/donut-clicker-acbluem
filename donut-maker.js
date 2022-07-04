@@ -57,7 +57,6 @@ class DonutMaker {
     }, 1000);
   }
 
-
 }
 
 let autoClickerPrice = 100;
