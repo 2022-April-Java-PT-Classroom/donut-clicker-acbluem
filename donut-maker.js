@@ -83,7 +83,7 @@ class DonutMaker {
     } else {
       let price = 1.1 ** this.numOfMultipliers;
       price /= Math.pow(10, -1);
-      return price;
+      return Math.round(price);
     }
   }
 

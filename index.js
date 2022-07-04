@@ -34,9 +34,9 @@ function createDonutMaker() {
     document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
     document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
     document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
-    document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue() + " donut(s) per click.";
-    document.getElementById('clicker-price').innerHTML = "Clicker price: " + createdDonutMaker.getClickerPrice();
-    document.getElementById('multiplier-price').innerHTML = "Multiplier price: " + createdDonutMaker.getMultiplierPrice();
+    document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue() + " donut(s)";
+    document.getElementById('clicker-price').innerHTML = "Clicker price: " + createdDonutMaker.getClickerPrice() + " donuts";
+    document.getElementById('multiplier-price').innerHTML = "Multiplier price: " + createdDonutMaker.getMultiplierPrice() + " donuts";
   }
 
   refreshStats();
