@@ -4,6 +4,27 @@ renderPage();
 
 function renderPage() {
   createDonutMaker();
+  createAboutDev();  
+}
+
+function createAboutDev() {
+  let modal = document.getElementById('dev-modal');
+  let devButton = document.getElementById('about-dev');
+  let closeX = document.getElementsByClassName('close')[0];
+
+  devButton.onclick = function () {
+    modal.style.display = 'block';
+  }
+
+  closeX.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
 }
 
 function createDonutMaker() {

@@ -8,21 +8,67 @@
     <title>Donut Clicker</title>
   </head>
   <body>
+
     <div class="container">
       <header>
         <h1>Donut Clicker</h1>
+
         <nav>
-          <a href="#info">
-            Who is Fred and what is his baking company?
-          </a>
-          <br>
-          <a name="info"></a>
-          <br>
-          <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">
-            Inspiration from the Original Cookie Clicker
-          </a>
+          <ol>
+            <li>
+              <a href="#info">
+                Who is Fred and what is his baking company?
+              </a>
+            </li>
+            <li>
+              <a name="info"></a>
+            </li>
+            <li>
+              <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">
+                Inspiration from the Original Cookie Clicker
+              </a>
+            </li>
+            <li>
+              <button id="about-dev">
+                About the Developer
+              </button>
+            </li>
+          </ol>
         </nav>
       </header>
+
+      <div id="dev-modal" class="modal">
+        <section class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            Hi! My name is Aisha (phonetic spelling: ay-zhuh).
+            I am a junior full-stack software developer pursuing my passion in coding,
+            reigniting the days of my youth where I'd make front-end websites of my
+            favorite cartoon/video game characters in the early and late 2000s.
+            I am a highly focused problem solver with excellent research and 
+            troubleshooting skills, committed to breaking into the tech industry.
+          </p>
+          <p>
+            See my portfolio 
+            <a href="http://acbluem.github.io" target="_blank">
+              here
+            </a>
+             or go to:
+          </p>
+          <ul>
+            <li>
+              <a href="http://www.linkedin.com/in/aishabluem/" target="_blank"><img src="/images/logo/li.png"></a>
+            </li>
+            <li>
+              <a href="https://github.com/acbluem" target="_blank"><img src="images/logo/gh.png"></a>
+            </li>
+            <li>
+              <a href="mailto:acbluem@gmail.com"><img src="images/logo/mail.png"></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
       <section class="main">
         <ul id="stats">
           <li id="donut-count"></li>
@@ -35,9 +81,11 @@
             <button id="buy-multiplier">Buy Donut Multiplier</button>
           </li>
         </ul>
+
         <button id="make-donut">Make Donut</button>
       </section>
     </div>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>
