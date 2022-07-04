@@ -30,20 +30,25 @@ function createAboutDev() {
 function createDonutMaker() {
   const createdDonutMaker = new DonutMaker(0, 0, 0);
 
-  document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
-  document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
-  document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
-  document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue();
+  function refreshStats() {
+    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+    document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
+    document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
+    document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue() + " donut(s) per click.";
+    document.getElementById('clicker-price').innerHTML = "Clicker price: " + createdDonutMaker.getClickerPrice();
+    document.getElementById('multiplier-price').innerHTML = "Multiplier price: " + createdDonutMaker.getMultiplierPrice();
+  }
+
+  refreshStats();
 
   let makeDonutButton = document.getElementById('make-donut');
   let buyClickerButton = document.getElementById('buy-clicker');
   let buyMultiplierButton = document.getElementById('buy-multiplier');
-  let clickValue = document.getElementById('click-value');
 
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
 
-    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+    refreshStats();
   });
 
   buyClickerButton.addEventListener('click', () => {
@@ -59,9 +64,8 @@ function createDonutMaker() {
       }, 2000);
     }
 
-    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
-    document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
-  });
+    refreshStats();
+    });
 
   buyMultiplierButton.addEventListener('click', () => {
     let oldMultiplierValue = createdDonutMaker.numOfMultipliers;
@@ -78,7 +82,6 @@ function createDonutMaker() {
       document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue();
     }
 
-    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
-    document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
+    refreshStats();
   });
 }

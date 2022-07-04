@@ -67,6 +67,26 @@ class DonutMaker {
     return 1.2 ** this.numOfMultipliers;
   }
 
+  getClickerPrice() {
+    if (this.numOfAutoClickers == 0) {
+      return 100;
+    } else {
+      let price = 1.1 ** this.numOfAutoClickers;
+      price /= Math.pow(10, -2);
+      return price;
+    }
+  }
+
+  getMultiplierPrice() {
+    if (this.numOfMultipliers == 0) {
+      return 10;
+    } else {
+      let price = 1.1 ** this.numOfMultipliers;
+      price /= Math.pow(10, -1);
+      return price;
+    }
+  }
+
 }
 
 let autoClickerPrice = 100;
