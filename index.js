@@ -33,4 +33,14 @@ function createDonutMaker() {
   document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
   document.getElementById('clicker-count').innerHTML = "Clicker count: " + createdDonutMaker.numOfAutoClickers;
   document.getElementById('multiplier-count').innerHTML = "Multiplier count: " + createdDonutMaker.numOfMultipliers;
+
+  let makeDonutButton = document.getElementById('make-donut');
+  let buyClickerButton = document.getElementById('buy-clicker');
+  let buyMultiplierButton = document.getElementById('buy-multiplier');
+
+  makeDonutButton.addEventListener('click', () => {
+    createdDonutMaker.addDonut();
+    document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+  
+  });
 }
