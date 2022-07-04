@@ -62,6 +62,11 @@ function createDonutMaker() {
       setTimeout(() => {
         buyClickerButton.innerText = 'Buy Auto Clicker';
       }, 2000);
+    } else {
+      createdDonutMaker.activateAutoClicker();
+      setInterval(() => {
+        document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
+      }, 1000);
     }
 
     refreshStats();

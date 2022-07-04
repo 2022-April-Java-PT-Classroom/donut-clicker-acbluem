@@ -55,11 +55,11 @@ class DonutMaker {
   }
 
   activateAutoClicker() {
+    for (let i = 0; i > this.numOfMultipliers; i++); {
+      multiAutoValue = 1.2 ** this.numOfMultipliers;
+    }
     setInterval(() => {
-      for (let i = 0; i > this.numOfMultipliers; i++); {
-        multiAutoValue *= 1.2;
-      }
-      this.numOfDonuts += Math.round(multiAutoValue);
+      this.numOfDonuts += multiAutoValue;
     }, 1000);
   }
 
