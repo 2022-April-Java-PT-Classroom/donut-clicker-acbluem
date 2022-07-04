@@ -28,7 +28,7 @@ function createAboutDev() {
 }
 
 function createDonutMaker() {
-  const createdDonutMaker = new DonutMaker(0, 0, 0);
+  let createdDonutMaker = new DonutMaker(0, 0, 0);
 
   function refreshStats() {
     document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
@@ -44,6 +44,7 @@ function createDonutMaker() {
   let makeDonutButton = document.getElementById('make-donut');
   let buyClickerButton = document.getElementById('buy-clicker');
   let buyMultiplierButton = document.getElementById('buy-multiplier');
+  let resetButton = document.getElementById('reset');
 
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
@@ -86,6 +87,12 @@ function createDonutMaker() {
     } else {
       document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue();
     }
+
+    refreshStats();
+  });
+
+  resetButton.addEventListener('click', () => {
+    createdDonutMaker = new DonutMaker(0, 0, 0);
 
     refreshStats();
   });
