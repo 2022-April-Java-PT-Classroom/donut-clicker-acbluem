@@ -7,10 +7,7 @@ class DonutMaker {
   }
 
   addDonut() {
-    let i = 0;
-    do {
-      multiplierValue = 1.2 ** this.numOfMultipliers;
-    } while (i > this.numOfMultipliers);
+    multiplierValue = 1.2 ** this.numOfMultipliers;
 
     if (this.numOfMultipliers > 0) {
       this.numOfDonuts += multiplierValue;
@@ -22,9 +19,7 @@ class DonutMaker {
 
   buyAutoClicker() {
     if (this.numOfAutoClickers >= 1) {
-      for (let i = 0; i > this.numOfAutoClickers; i++); {
-        autoClickerPrice = 1.1 ** this.numOfAutoClickers; 
-      }
+      autoClickerPrice = 1.1 ** this.numOfAutoClickers; 
       autoClickerPrice /= Math.pow(10, -2);
     }
 
@@ -38,11 +33,7 @@ class DonutMaker {
 
   buyDonutMultiplier() {
     if (this.numOfMultipliers >= 1) {
-      let i = 0;
-      do {
-        multiplierPrice = 1.1 ** this.numOfMultipliers;
-      } while (i > this.numOfMultipliers);
-      
+      multiplierPrice = 1.1 ** this.numOfMultipliers;
       multiplierPrice /= Math.pow(10, -1);
     }
 
@@ -55,11 +46,8 @@ class DonutMaker {
   }
 
   activateAutoClicker() {
-    for (let i = 0; i > this.numOfMultipliers; i++); {
-      multiAutoValue = 1.2 ** this.numOfMultipliers;
-    }
     setInterval(() => {
-      this.numOfDonuts += multiAutoValue;
+      this.numOfDonuts += multiplierValue;
     }, 1000);
   }
 
@@ -92,6 +80,5 @@ class DonutMaker {
 let autoClickerPrice = 100;
 let multiplierPrice = 10;
 let multiplierValue = 1;
-let multiAutoValue = 1;
 
 export default DonutMaker;
