@@ -88,7 +88,7 @@ body {
   margin: 10px;
   padding-right: 40px;
   opacity: .9;
-  background-image: radial-gradient(500px 500px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
+  background: radial-gradient(500px 500px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
   background-position: center;
   background-size: 500px 500px;
 }
@@ -98,6 +98,9 @@ body {
   border-bottom: 50px dotted #f4a460;
   border-left: 50px solid #f4a460;
   border-right: 50px solid #f4a460;
+  background-image: url(./images/donuts.png),  radial-gradient(500px 500px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
+  background-position: center;
+  background-size: cover;
 }
 
 .main {
@@ -195,4 +198,8 @@ a:visited {
 
 .bold, a:hover {
   font-weight: bold;
+}
+
+.background-fade {
+  background: radial-gradient(#f4a460, #f4a460, transparent, transparent);
 }
