@@ -32,7 +32,7 @@ body {
   background-color: #f4a460;
   opacity: .9;
   border-radius: 50%;
-  border: 3px dotted #ffefd5;
+  border: 3px solid #ffefd5;
 }
 
 .modal-content:hover {
@@ -59,15 +59,16 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  padding: 50px;
+  width: 150px;
+  height: 150px;
+  padding: 25px;
   padding-bottom: 20px;
   z-index: 1;
   background-color: #f4a460;
   opacity: .9;
   border-radius: 50%;
-  border: 3px dotted #ffefd5;
+  border: 3px solid #ffefd5;
+  font-size: 14px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -97,8 +98,15 @@ ul li {
   padding: 5px;
 }
 
-ul li+li, ol li+li {
+.counts li {
+  border-bottom: 5px double #f4a460;
   border-top: 5px double #f4a460;
+  border-radius: 50%;
+  background-color: #ffefd5;
+}
+
+.values li {
+  width: 75px;
 }
 
 ol li {
@@ -141,4 +149,8 @@ a {
 
 a:visited {
   color: #000;
+}
+
+.bold {
+  font-weight: bold;
 }
