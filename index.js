@@ -71,7 +71,7 @@ function createDonutMaker() {
     }
 
     refreshStats();
-    });
+  });
 
   buyMultiplierButton.addEventListener('click', () => {
     let oldMultiplierValue = createdDonutMaker.numOfMultipliers;
@@ -84,8 +84,6 @@ function createDonutMaker() {
       setTimeout(() => {
         buyMultiplierButton.innerText = 'Buy Donut Multiplier';
       }, 2000);
-    } else {
-      document.getElementById('click-value').innerHTML = "Click value: " + createdDonutMaker.getClickValue();
     }
 
     refreshStats();

@@ -9,20 +9,11 @@ class DonutMaker {
   addDonut() {
     this.calculateMultiplierValue();
 
-    if (this.numOfMultipliers > 0) {
-      this.numOfDonuts += multiplierValue;
-    } else {
-      this.numOfDonuts += 1;
-    }
-    
+    this.numOfDonuts += multiplierValue;    
   }
 
   buyAutoClicker() {
-    if (this.numOfAutoClickers >= 1) {
-      this.calculateClickerPrice();
-    }
-
-    autoClickerPrice = Math.round(autoClickerPrice);
+    autoClickerPrice = this.calculateClickerPrice();
 
     if (autoClickerPrice <= this.numOfDonuts) {
       this.numOfDonuts -= autoClickerPrice;
@@ -31,11 +22,7 @@ class DonutMaker {
   }
 
   buyDonutMultiplier() {
-    if (this.numOfMultipliers >= 1) {
-      this.calculateMultiplierPrice();
-    }
-
-    multiplierPrice = Math.round(multiplierPrice);
+    multiplierPrice = this.calculateMultiplierPrice();
 
     if (multiplierPrice <= this.numOfDonuts) {
       this.numOfDonuts -= multiplierPrice;
@@ -57,13 +44,13 @@ class DonutMaker {
   calculateClickerPrice() {
     autoClickerPrice = 1.1 ** this.numOfAutoClickers; 
     autoClickerPrice /= Math.pow(10, -2);
-    return autoClickerPrice;
+    return Math.round(autoClickerPrice);
   }
 
   calculateMultiplierPrice() {
     multiplierPrice = 1.1 ** this.numOfMultipliers;
     multiplierPrice /= Math.pow(10, -1);
-    return multiplierPrice;
+    return Math.round(multiplierPrice);
   }
 
   getClickValue() {
@@ -71,19 +58,11 @@ class DonutMaker {
   }
 
   getClickerPrice() {
-    if (this.numOfAutoClickers == 0) {
-      return 100;
-    } else {
-      return Math.round(this.calculateClickerPrice());
-    }
+    return this.calculateClickerPrice();
   }
 
   getMultiplierPrice() {
-    if (this.numOfMultipliers == 0) {
-      return 10;
-    } else {
-      return Math.round(this.calculateMultiplierPrice());
-    }
+    return this.calculateMultiplierPrice();
   }
 
 }
