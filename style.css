@@ -1,3 +1,15 @@
+body {
+  background: repeating-radial-gradient(50px 50px, #efc2c2 10%, #f9e2d2 40%);
+  background-size: 50px 50px;
+}
+
+.container {
+  display:flex; 
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -12,10 +24,12 @@
 
 .modal-content {
   margin: auto;
-  padding: 20px;
+  padding: 100px;
   border: none;
-  width: 80%;
-  background-color: #ffa;
+  width: 20%;
+  background-color: #fff;
+  opacity: .8;
+  border-radius: 50%;
 }
 
 .close {
@@ -28,6 +42,26 @@
   text-decoration: none;
 }
 
+/* .fred {
+  opacity: 0;
+}
+
 a:target:after{
-  content: " Fred owns the baking company called Fred the Baker Baking Company. This donut clicker exists to continue making donuts so that Fred can finally retire. Have fun!";
+  opacity: 1;
+} */
+
+.small-width {
+  width: 200px;
+}
+
+.center-text, .main, h1 {
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+}
+
+ol li {
+  list-style: none;
 }
