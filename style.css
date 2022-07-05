@@ -50,13 +50,15 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 200px;
+  height: 200px;
   padding: 50px;
+  padding-bottom: 20px;
   z-index: 1;
-  background-color: #fff;
-  opacity: .8;
+  background-color: #efc2c2;
+  opacity: .9;
   border-radius: 50%;
+  border: 3px dotted #f9e2d2;
 }
 
 .dropdown:hover .dropdown-content {
@@ -87,7 +89,7 @@ ul li {
 }
 
 ul li+li, ol li+li {
-  border-top: 1px solid #000;
+  border-top: 3px dotted #000;
 }
 
 ol li {
@@ -98,4 +100,19 @@ ol li {
 
 button {
   margin: 10px;
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  border: 3px dotted #f9e2d2;
+  border-radius: 50%;
+  background-color: #efc2c2;
+}
+
+button:hover {
+  background-color: #f9e2d2;
+  border-color: #efc2c2;
+}
+
+h1 {
+  font-size: 48px;
 }
