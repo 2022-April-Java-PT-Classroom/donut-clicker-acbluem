@@ -121,6 +121,9 @@ ul li {
   border-radius: 50%;
   background: radial-gradient(#ffefd5, #ffefd5, transparent, transparent);
   padding: 15px 5px;
+  max-width: 70px;
+  overflow-x: hidden;
+  text-align: center;
 }
 
 .values li {
@@ -177,7 +180,7 @@ button:hover {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 70px;
   font-family: 'Kurale', serif;
   text-shadow: 2px 2px #f4a460;
 }
