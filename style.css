@@ -1,5 +1,5 @@
 body {
-  background: repeating-radial-gradient(50px 50px, #efc2c2 10%, #f9e2d2 40%);
+  background-image: repeating-radial-gradient(50px 50px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
   background-size: 50px 50px;
 }
 
@@ -27,9 +27,15 @@ body {
   padding: 100px;
   border: none;
   width: 20%;
-  background-color: #fff;
-  opacity: .8;
+  background-color: #f4a460;
+  opacity: .9;
   border-radius: 50%;
+  border: 3px dotted #f9e2d2;
+}
+
+.modal-content:hover {
+  background-color: #f9e2d2;
+  border-color: #f4a460;
 }
 
 .close {
@@ -40,6 +46,7 @@ body {
 .close:hover,
 .close:focus {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -55,7 +62,7 @@ body {
   padding: 50px;
   padding-bottom: 20px;
   z-index: 1;
-  background-color: #efc2c2;
+  background-color: #f4a460;
   opacity: .9;
   border-radius: 50%;
   border: 3px dotted #f9e2d2;
@@ -67,12 +74,16 @@ body {
 
 header, .main {
   background-color: #fff;
+  border: 3px dotted #000;
   border-radius: 50%;
   height: 500px;
   width: 500px;
   margin: 10px;
   padding-right: 40px;
-  opacity: .8;
+  opacity: .9;
+  background-image: radial-gradient(500px 500px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
+  background-position: center;
+  background-size: 500px 500px;
 }
 
 .bold {
@@ -105,12 +116,12 @@ button {
   width: 80px;
   border: 3px dotted #f9e2d2;
   border-radius: 50%;
-  background-color: #efc2c2;
+  background-color: #f4a460;
 }
 
 button:hover {
   background-color: #f9e2d2;
-  border-color: #efc2c2;
+  border-color: #f4a460;
 }
 
 h1 {
