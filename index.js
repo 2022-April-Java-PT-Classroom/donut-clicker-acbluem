@@ -30,6 +30,7 @@ function createAboutDev() {
 function createDonutMaker() {
   let createdDonutMaker = new DonutMaker(0, 0, 0);
   let audio = new Audio('./sounds/sound.mp3');
+  let select = new Audio('./sounds/select.mp3');
 
   function refreshStats() {
     document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
@@ -50,7 +51,10 @@ function createDonutMaker() {
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
 
-    if (createdDonutMaker.getClickerPrice() == createdDonutMaker.numOfDonuts) {
+    select.play();
+
+    if (createdDonutMaker.getClickerPrice() == createdDonutMaker.numOfDonuts || 
+    createdDonutMaker.getMultiplierPrice() == createdDonutMaker.numOfDonuts) {
       audio.play();
     }
 
@@ -78,6 +82,8 @@ function createDonutMaker() {
       }, 1000);
     }
 
+    select.play();
+
     refreshStats();
   });
 
@@ -96,11 +102,15 @@ function createDonutMaker() {
       }, 2000);
     }
 
+    select.play();
+
     refreshStats();
   });
 
   resetButton.addEventListener('click', () => {
     createdDonutMaker = new DonutMaker(0, 0, 0);
+
+    select.play();
 
     refreshStats();
   });
