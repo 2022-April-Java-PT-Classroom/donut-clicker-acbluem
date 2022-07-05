@@ -2,6 +2,7 @@ body {
   background-image: repeating-radial-gradient(50px 50px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
   background-size: 50px 50px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
 }
 
 .container, header, .main {
@@ -87,10 +88,6 @@ header, .main {
   background-size: 500px 500px;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .center-text, .main, h1, .button{
   text-align: center;
 }
@@ -101,13 +98,13 @@ ul li {
 }
 
 ul li+li, ol li+li {
-  border-top: 3px dotted #000;
+  border-top: 5px double #f4a460;
 }
 
 ol li {
   list-style: none;
   list-style-position: inside;
-  padding: 5px;
+  padding: 10px 5px;
 }
 
 button {
@@ -118,6 +115,9 @@ button {
   border: 3px solid #ffefd5;
   border-radius: 50%;
   background-color: #f4a460;
+  font-family: 'Quicksand', sans-serif;
+  transition: background-color 1s;
+  font-weight: bold;
 }
 
 button:hover {
@@ -125,7 +125,20 @@ button:hover {
   border-color: #f4a460;
 }
 
+#about-dev {
+  width: 100px;
+  height: 100px;
+}
+
 h1 {
   font-size: 56px;
   font-family: 'Kurale', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
 }
