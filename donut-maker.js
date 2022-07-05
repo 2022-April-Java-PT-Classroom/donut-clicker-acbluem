@@ -53,7 +53,7 @@ class DonutMaker {
     multiplierPrice = 1.1 ** this.numOfMultipliers;
     multiplierPrice /= Math.pow(10, -1);
     
-    return Math.round(multiplierPrice);
+    return multiplierPrice;
   }
 
 }

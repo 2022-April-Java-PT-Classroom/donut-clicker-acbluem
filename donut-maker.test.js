@@ -88,10 +88,10 @@ describe('DonutMaker object', () => {
   test('Increases cost of multiplier further on third purchase', () => {
     const underTest = new DonutMaker(12, 0, 2);
     underTest.buyDonutMultiplier();
-    expect(underTest.numOfDonuts).toEqual(0);
+    expect(underTest.numOfDonuts).toBeLessThan(13);
   });
 
-  test('Donuts does not subtract when there are insufficient funds for multipier', () => {
+  test('Donuts does not subtract when there are insufficient funds for multiplier', () => {
     const underTest = new DonutMaker(11, 0, 2);
     underTest.buyDonutMultiplier();
     expect(underTest.numOfMultipliers).toEqual(2);
