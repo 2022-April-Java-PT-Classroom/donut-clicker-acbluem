@@ -38,18 +38,21 @@ class DonutMaker {
 
   getClickValue() {
     multiplierValue = 1.2 ** this.numOfMultipliers;
+
     return multiplierValue;
   }
 
   getClickerPrice() {
     autoClickerPrice = 1.1 ** this.numOfAutoClickers; 
     autoClickerPrice /= Math.pow(10, -2);
+
     return Math.round(autoClickerPrice);
   }
 
   getMultiplierPrice() {
     multiplierPrice = 1.1 ** this.numOfMultipliers;
     multiplierPrice /= Math.pow(10, -1);
+    
     return Math.round(multiplierPrice);
   }
 

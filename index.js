@@ -12,19 +12,19 @@ function createAboutDev() {
   let devButton = document.getElementById('about-dev');
   let closeX = document.getElementsByClassName('close')[0];
 
-  devButton.onclick = function () {
+  devButton.addEventListener('click', () => {
     modal.style.display = 'block';
-  }
+  });
 
-  closeX.onclick = function() {
+  closeX.addEventListener('click', () => {
     modal.style.display = 'none';
-  }
+  });
 
-  window.onclick = function(event) {
+  window.addEventListener('click', (event) => {
     if (event.target == modal) {
       modal.style.display = 'none';
     }
-  }
+  });
 }
 
 function createDonutMaker() {
@@ -54,7 +54,9 @@ function createDonutMaker() {
 
   buyClickerButton.addEventListener('click', () => {
     let oldClickerValue = createdDonutMaker.numOfAutoClickers;
+
     createdDonutMaker.buyAutoClicker();
+
     let newClickerValue = createdDonutMaker.numOfAutoClickers;
 
     if (oldClickerValue == newClickerValue) {
@@ -65,6 +67,7 @@ function createDonutMaker() {
       }, 2000);
     } else {
       createdDonutMaker.activateAutoClicker();
+      
       setInterval(() => {
         document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
       }, 1000);
@@ -75,7 +78,9 @@ function createDonutMaker() {
 
   buyMultiplierButton.addEventListener('click', () => {
     let oldMultiplierValue = createdDonutMaker.numOfMultipliers;
+
     createdDonutMaker.buyDonutMultiplier();
+
     let newMultiplierValue = createdDonutMaker.numOfMultipliers;
 
     if (oldMultiplierValue == newMultiplierValue) {
