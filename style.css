@@ -1,6 +1,7 @@
 body {
   background-image: repeating-radial-gradient(50px 50px, #ffefd5 30%, #f4a460 60%, #ffefd5 80%);
   background-size: 50px 50px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container, header, .main {
@@ -30,11 +31,11 @@ body {
   background-color: #f4a460;
   opacity: .9;
   border-radius: 50%;
-  border: 3px dotted #f9e2d2;
+  border: 3px dotted #ffefd5;
 }
 
 .modal-content:hover {
-  background-color: #f9e2d2;
+  background-color: #ffefd5;
   border-color: #f4a460;
 }
 
@@ -65,7 +66,7 @@ body {
   background-color: #f4a460;
   opacity: .9;
   border-radius: 50%;
-  border: 3px dotted #f9e2d2;
+  border: 3px dotted #ffefd5;
 }
 
 .dropdown:hover .dropdown-content {
@@ -74,7 +75,7 @@ body {
 
 header, .main {
   background-color: #fff;
-  border: 3px dotted #000;
+  border: 50px solid #f4a460;;
   border-radius: 50%;
   height: 500px;
   width: 500px;
@@ -114,16 +115,17 @@ button {
   padding: 10px;
   height: 80px;
   width: 80px;
-  border: 3px dotted #f9e2d2;
+  border: 3px solid #ffefd5;
   border-radius: 50%;
   background-color: #f4a460;
 }
 
 button:hover {
-  background-color: #f9e2d2;
+  background-color: #ffefd5;
   border-color: #f4a460;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 56px;
+  font-family: 'Kurale', serif;
 }
