@@ -51,6 +51,7 @@ function createDonutMaker() {
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
 
+    select.load();
     select.play();
 
     if (createdDonutMaker.getClickerPrice() == createdDonutMaker.numOfDonuts || 
@@ -82,6 +83,7 @@ function createDonutMaker() {
       }, 1000);
     }
 
+    select.load();
     select.play();
 
     refreshStats();
@@ -102,6 +104,7 @@ function createDonutMaker() {
       }, 2000);
     }
 
+    select.load();
     select.play();
 
     refreshStats();
@@ -110,6 +113,7 @@ function createDonutMaker() {
   resetButton.addEventListener('click', () => {
     createdDonutMaker = new DonutMaker(0, 0, 0);
 
+    select.load();
     select.play();
 
     refreshStats();
