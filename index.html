@@ -14,16 +14,20 @@
         <h1>Donut Clicker</h1>
 
         <nav>
+          <div class="center-text">
           <ol>
             <li>
-              <a href="#info">
-                Who is Fred and what is his baking company?
-              </a>
+          <div class="dropdown">
+            <span>
+              Who is Fred and what is his baking company?
+            </span>
+            <div class="dropdown-content">
+              Fred owns the baking company called <span class="bold">Fred the Baker Baking Company</span>. 
+              This donut clicker exists to continue making donuts so that Fred can finally retire. 
+              Somebody needs to continue making donuts, so thanks for volunteering! Have fun!
+            </div>
+          </div>
             </li>
-            <li>
-              <a name="info" class="fred">
-                Fred owns the baking company called Fred the Baker Baking Company. This donut clicker exists to continue making donuts so that Fred can finally retire. Have fun!
-              </a>
             </li>
             <li>
               <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">
@@ -31,11 +35,14 @@
               </a>
             </li>
             <li>
-              <button id="about-dev">
-                About the Developer
-              </button>
+              <div>
+                <button id="about-dev">
+                  About the Developer
+                </button>
+              </div>
             </li>
           </ol>
+          </div>
         </nav>
       </header>
 
@@ -64,26 +71,29 @@
       </div>
 
       <section class="main">
-        <ul id="stats">
+        <ul id="stats" class="bold">
           <li id="donut-count"></li>
           <li id="clicker-count"></li>
+          <li id="multiplier-count"></li>
+        </ul>
+
+        <ul id="stats">
           <li>
             <button id="buy-clicker">Buy Auto Clicker</button>
           </li>
-          <li id="multiplier-count"></li>
           <li>
             <button id="buy-multiplier">Buy Donut Multiplier</button>
           </li>
         </ul>
 
-        <button id="make-donut">Make Donut</button>
-
-        <ul>
+        <ul class="bold">
           <li id="click-value"></li>
           <li id="clicker-price"></li>
           <li id="multiplier-price"></li>
         </ul>
 
+        <button id="make-donut">Make Donut</button>
+        
         <button id="reset">Reset</button>
       </section>
     </div>
