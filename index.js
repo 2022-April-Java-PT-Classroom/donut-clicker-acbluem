@@ -29,6 +29,7 @@ function createAboutDev() {
 
 function createDonutMaker() {
   let createdDonutMaker = new DonutMaker(0, 0, 0);
+  let audio = new Audio('./sounds/sound.mp3');
 
   function refreshStats() {
     document.getElementById('donut-count').innerHTML = "Donut count: " + createdDonutMaker.numOfDonuts;
@@ -48,6 +49,10 @@ function createDonutMaker() {
 
   makeDonutButton.addEventListener('click', () => {
     createdDonutMaker.addDonut();
+
+    if (createdDonutMaker.getClickerPrice() == createdDonutMaker.numOfDonuts) {
+      audio.play();
+    }
 
     refreshStats();
   });
