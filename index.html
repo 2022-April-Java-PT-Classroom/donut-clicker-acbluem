@@ -4,10 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
     <title>Donut Clicker</title>
   </head>
   <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
+
+    <div class="container">
+      <section class="head">
+        <header>
+          <h1>Donut Clicker</h1>
+
+          <nav>
+            <div class="center-text">
+            <ol>
+              <li class="background-fade">
+            <div class="dropdown">
+              Who is Fred and what is his baking company?
+              <div class="dropdown-content">
+                Fred owns the baking company called <span class="bold">Fred the Baker Baking Company</span>. 
+                This donut clicker exists to continue making donuts so that Fred can finally retire. 
+              </div>
+            </div>
+              </li>
+              </li>
+              <li class="background-fade">
+                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">
+                  Inspiration from the Original Cookie Clicker
+                </a>
+              </li>
+              <li>
+                <div>
+                  <button id="about-dev">
+                    About the Developer
+                  </button>
+                </div>
+              </li>
+            </ol>
+            </div>
+          </nav>
+        </header>
+      </section>
+
+      <div id="dev-modal" class="modal">
+        <section class="modal-content">
+          <p>
+            Hi! My name is Aisha (phonetic spelling: ay-zhuh).
+            I am a junior full-stack software developer pursuing my passion in coding,
+            reigniting the days of my youth where I'd make front-end websites of my
+            favorite cartoon/video game characters in the early and late 2000s.
+            I am a highly focused problem solver with excellent research and 
+            troubleshooting skills, committed to breaking into the tech industry.
+          </p>
+          <p class="center-text">
+            See my portfolio 
+            <a href="http://acbluem.github.io" target="_blank">
+              here
+            </a>
+             or go to:
+              <a href="http://www.linkedin.com/in/aishabluem/" target="_blank"><img src="/images/logo/li.png"></a>
+              <a href="https://github.com/acbluem" target="_blank"><img src="images/logo/gh.png"></a>
+              <a href="mailto:acbluem@gmail.com"><img src="images/logo/mail.png"></a>
+          </p>
+          <div class="close">&times;</div>
+        </section>
+      </div>
+
+      <section class="main">
+        <ul id="stats" class="counts">
+          <li id="donut-count"></li>
+          <li id="clicker-count"></li>
+          <li id="multiplier-count"></li>
+        </ul>
+
+        <ul id="stats">
+          <li>
+            <button id="buy-clicker">Buy Auto Clicker</button>
+          </li>
+          <li>
+            <button id="buy-multiplier">Buy Donut Multiplier</button>
+          </li>
+        </ul>
+
+        <ul class="counts values">
+          <li id="click-value"></li>
+          <li id="clicker-price"></li>
+          <li id="multiplier-price"></li>
+        </ul>
+
+        <ul>
+          <li>
+            <button id="make-donut">MAKE DONUT</button>
+          </li>
+          <li>
+            <button id="reset">RESET</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
